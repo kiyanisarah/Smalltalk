@@ -15,6 +15,8 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - Hi
+    - wazzup
 - intent: goodbye
   examples: |
     - good afternoon
@@ -36,6 +38,9 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yes, it did
+    - yes, that helped
+    - Yes
 - intent: deny
   examples: |
     - no
@@ -61,6 +66,9 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - i am awesome
+    - i'm good!
+    - I'm good
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -77,6 +85,8 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - I am not good
+    - Not good
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -86,3 +96,10 @@ nlu:
 - intent: greet_smalltalk
   examples: |
     - wassup
+- intent: ask_weather
+  examples: |
+    - is it hot today?
+    - How's the weather today?
+- intent: utter_ask_weather
+  examples: |
+    - how's the weather?

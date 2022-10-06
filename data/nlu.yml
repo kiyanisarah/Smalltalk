@@ -17,6 +17,7 @@ nlu:
     - good afternoon
     - Hi
     - wazzup
+    - wassup
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,6 +31,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - Okay, bye
 - intent: affirm
   examples: |
     - yes
@@ -41,6 +43,7 @@ nlu:
     - yes, it did
     - yes, that helped
     - Yes
+    - Okay
 - intent: deny
   examples: |
     - no
@@ -93,13 +96,28 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-- intent: greet_smalltalk
-  examples: |
-    - wassup
 - intent: ask_weather
   examples: |
     - is it hot today?
     - How's the weather today?
+    - how's the weather today?
 - intent: utter_ask_weather
   examples: |
     - how's the weather?
+- intent: question
+  examples: |
+    - What are you saying?
+    - What is that suppose to mean?
+- synonym: Great
+  examples: |
+    - Good
+    - fine
+    - super
+    - awesome
+- synonym: Hello
+  examples: |
+    - Hi
+    - Wassup
+    - Heyy
+    - Wazzup
+    - sup?

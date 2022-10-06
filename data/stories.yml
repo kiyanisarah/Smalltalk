@@ -62,3 +62,11 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+- story: Story from Conversation ID a334b2f940f444cfb515e45a0ab3b0cb
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye

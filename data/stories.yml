@@ -1,14 +1,11 @@
 version: "2.0"
-
 stories:
-
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-
 - story: sad path 1
   steps:
   - intent: greet
@@ -18,7 +15,6 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
-
 - story: sad path 2
   steps:
   - intent: greet
@@ -28,3 +24,41 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+- story: Story from Conversation ID 9865ebede4964b8faafce3a91f5a634f
+  steps:
+  - action: utter_happy
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_weather
+- story: Story from Conversation ID d3eaf27386d144d29256d6d936f41617
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - action: utter_happy
+- story: Story from Conversation ID c4418953363742b5b206091ee7834325
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: Story from Conversation ID 4b356e0ca28646e0b2f5c609955d7eda
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: Story from Conversation ID 4aa8af033d824247ab5ab0813b94e569
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy

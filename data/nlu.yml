@@ -1,4 +1,5 @@
-version: "2.0"
+version: "3.0"
+
 nlu:
 - intent: greet
   examples: |
@@ -15,6 +16,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - hi there
     - Hi
     - wazzup
     - wassup
@@ -40,6 +42,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yep
+    - yeah
     - yes, it did
     - yes, that helped
     - Yes
@@ -96,6 +100,47 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: inform
+  examples: |
+    - Hi, my name is [Sarah](name)
+    - Hello there, i am [Ali](name)
+    - Nice to meet you rasa chat bot, i am [Jason](name)
+    - Oh hey, [dan](name) here
+    - Hello, i am [Jessica](name)
+    - Greetings bot, [Ross](name) here
+- intent: inquire_time
+  examples: |
+    - what time is it?
+    - what time is it in [Islamabad](place)?
+    - what time is it in [Lahore](place)?
+    - tell me the time in [Rawalpindi](place)
+    - what is the current time in [Quetta](place)
+    - what time is it in [Karachi](place)[](place)
+- lookup: place
+  examples: |
+    - islamabad
+    - rawalpindi
+    - lahore
+    - karachi
+    - peshawar
+    - quetta
+    
+- intent: where_i_live
+  examples: |
+    - please remember that i live in [Islamabad](place)?
+    - my house is in [Rawalpindi](place)?
+    - reminder. i live in [Lahore](place)
+    - my residence is in [Karachi](place)
+    - remember that i live in [Quetta](place)
+
+- intent: inquire_time_difference
+  examples: |
+    - time difference between [Islamabad](place)?
+    - what is my time difference with [Lahore](place)?
+    - how big is the time delta with [Rawalpindi](place)?
+    - is there a time difference with [Peshawar](place)?
+    - what is the time difference with [Quetta](place)    
+    
 - intent: ask_weather
   examples: |
     - is it hot today?

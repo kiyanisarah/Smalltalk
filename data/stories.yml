@@ -1,4 +1,5 @@
-version: "2.0"
+version: "3.0"
+
 stories:
 - story: happy path
   steps:
@@ -6,6 +7,13 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - intent: inquire_time
+  - action: action_tell_time
+  - intent: where_i_live
+  - action: action_remember_where
+  - intent: inquire_time_difference
+  - action: action_time_difference
+
 - story: sad path 1
   steps:
   - intent: greet
@@ -24,55 +32,35 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-- story: Story from Conversation ID 9865ebede4964b8faafce3a91f5a634f
-  steps:
-  - action: utter_happy
-  - intent: greet
-  - action: utter_greet
-  - action: utter_ask_weather
-- story: Story from Conversation ID d3eaf27386d144d29256d6d936f41617
+
+- story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - action: utter_happy
-- story: Story from Conversation ID c4418953363742b5b206091ee7834325
+  - intent: inquire_time
+    entities:
+    - place: islamabad
+  - action: action_tell_time
+
+- story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-- story: Story from Conversation ID 4b356e0ca28646e0b2f5c609955d7eda
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-- story: Story from Conversation ID 4aa8af033d824247ab5ab0813b94e569
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-- story: Story from Conversation ID a334b2f940f444cfb515e45a0ab3b0cb
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-  - intent: goodbye
-  - action: utter_goodbye
-- story: Story from Conversation ID 451349b2f273453f8686a40c2740899d
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: where_i_live
+    entities:
+    - place: rawalpindi
+  - action: action_remember_where
+  - slot_was_set:
+    - location: rawalpindi
+  - intent: inquire_time_difference
+    entities:
+    - place: karachi
+  - action: action_time_difference
+  - intent: inquire_time_difference
+    entities:
+    - place: karachi
+  - action: action_time_difference
+  - intent: inquire_time_difference
+    entities:
+    - place: karachi
+  - action: action_time_difference

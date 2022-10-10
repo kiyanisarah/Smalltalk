@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 
 stories:
 
@@ -8,6 +8,12 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - intent: inquire_time
+  - action: action_tell_time
+  - intent: where_i_live
+  - action: action_remember_where
+  - intent: inquire_time_difference
+  - action: action_time_difference
 
 - story: sad path 1
   steps:
@@ -28,3 +34,35 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_time
+    entities:
+    - place: islamabad
+  - action: action_tell_time
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: where_i_live
+    entities:
+    - place: rawalpindi
+  - action: action_remember_where
+  - slot_was_set:
+    - location: rawalpindi
+  - intent: inquire_time_difference
+    entities:
+    - place: karachi
+  - action: action_time_difference
+  - intent: inquire_time_difference
+    entities:
+    - place: karachi
+  - action: action_time_difference
+  - intent: inquire_time_difference
+    entities:
+    - place: karachi
+  - action: action_time_difference

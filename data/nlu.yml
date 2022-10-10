@@ -17,6 +17,9 @@ nlu:
     - goodevening
     - good afternoon
     - hi there
+    - Hi
+    - wazzup
+    - wassup
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,6 +33,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - Okay, bye
 - intent: affirm
   examples: |
     - yes
@@ -40,6 +44,10 @@ nlu:
     - correct
     - yep
     - yeah
+    - yes, it did
+    - yes, that helped
+    - Yes
+    - Okay
 - intent: deny
   examples: |
     - no
@@ -65,6 +73,9 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - i am awesome
+    - i'm good!
+    - I'm good
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -81,6 +92,8 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - I am not good
+    - Not good
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -128,3 +141,28 @@ nlu:
     - is there a time difference with [Peshawar](place)?
     - what is the time difference with [Quetta](place)    
     
+- intent: ask_weather
+  examples: |
+    - is it hot today?
+    - How's the weather today?
+    - how's the weather today?
+- intent: utter_ask_weather
+  examples: |
+    - how's the weather?
+- intent: question
+  examples: |
+    - What are you saying?
+    - What is that suppose to mean?
+- synonym: Great
+  examples: |
+    - Good
+    - fine
+    - super
+    - awesome
+- synonym: Hello
+  examples: |
+    - Hi
+    - Wassup
+    - Heyy
+    - Wazzup
+    - sup?
